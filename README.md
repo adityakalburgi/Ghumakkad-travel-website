@@ -67,6 +67,3 @@ We welcome contributions! If you'd like to help us improve Ghumakkad, please fol
 
 If you encounter any issues or have suggestions, please open an issue in the repository.
 
----
-
-Let me know if there are any more adjustments or additions you'd like!
