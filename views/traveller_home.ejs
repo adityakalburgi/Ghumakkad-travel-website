@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide Connection</title>
+    <style>
+    /* Base Styles */
+body {
+    background-image: url("/images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 500px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: rgba(31, 30, 30, 0.5);
+    -webkit-backdrop-filter: blur(0.5);
+    backdrop-filter: blur(0.5);
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo {
+    float: left;
+    font-size: 24px;
+    margin-right: 100px;
+    margin-bottom: 5px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 200px;
+    background: url('/public/images/1.jpg') no-repeat center center;
+    background-size: cover;
+    color: #100f0f;
+    padding: 60px 0;
+    text-align: center;
+
+}
+
+.hero h1 {
+    color: black;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.location-input {
+    margin: 20px 0;
+}
+
+.location-input input {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.location-input button, #useLocation {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Guide List */
+.guide-list {
+    padding: 40px 0;
+    text-align: center;
+}
+h1 {
+    font-weight: 850;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.guide-list h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#guidesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.guide-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.guide-card img {
+    width: 100%;
+    height: auto;
+}
+
+.guide-card h3 {
+    margin: 10px 0;
+}
+
+.guide-card button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 350px ;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .contact {
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    header nav ul li {
+        margin-right: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .guide-card {
+        width: 180px;
+    }
+
+    .guide-list h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+     
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .location-input input,
+    .location-input button,
+    #useLocation {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .guide-card {
+        width: 150px;
+    }
+
+    .guide-list h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        color: black;
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .location-input input,
+    .location-input button,
+    #useLocation {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .guide-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .guide-list h2 {
+        font-size: 18px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Ghumakkad</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <% if(!login){ %>
+                        <li><a href="/Login.ejs">Login</a></li>  
+                    <%  }else{ %>
+                        <li><a href="#">Welcome <%= traveller.name %>!</a></li>   
+                   <%  } %>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Discover the Best Local Guides for Your Next Adventure!</h1>
+            <p>Find expert local guides to enrich your travel experience.</p>
+            <form id="locationform" action="/guide_list" method="POST" class="location-input">
+                <label for="location">Enter your location:</label>
+                <input type="text" id="location" name="city" placeholder="Type your city or area">
+                <button type="submit">Find Guides</button>
+            </form>
+            <button id="useLocation">Use My Current Location</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="contact">
+                <p>Email: <a href="mailto:support@yourwebsite.com"></a></p>
+                <p>Phone:</p>
+            </div>
+        </div>
+    </footer>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('locationForm');
+        var button = form.querySelector('button');
+        var input = form.querySelector('input');
+
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var location = input.value.trim().toLowerCase(); // Get the value and normalize it
+
+            var redirects = {
+                'bengaluru': '/guide_list',
+                // Add more locations and their respective pages here
+            };
+
+            if (redirects[location]) {
+                window.location.href = redirects[location];
+            } else {
+                alert('No guide found for this location.');
+            }
+        });
+    });
+
+
+</script>
+    
+</body>
+</html>
+

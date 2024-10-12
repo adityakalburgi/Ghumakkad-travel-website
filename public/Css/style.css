@@ -1,0 +1,84 @@
+/* Reset some default browser styles */
+body, h1, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for centering the form */
+.container {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(0.5);
+    backdrop-filter: blur(0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input and select box styling */
+input, select {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}

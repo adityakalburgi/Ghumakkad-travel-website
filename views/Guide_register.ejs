@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/images/1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(252, 251, 251, 0.8);
+            backdrop-filter: blur(1px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        a:hover {
+            color: #333;
+        }
+
+        .language-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .language-label input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            input[type="text"],
+            input[type="file"] {
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            input[type="text"],
+            input[type="file"] {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        /* Added styles for better form layout */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            form {
+                display: block;
+            }
+
+            label {
+                margin-bottom: 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Guide Registration</h2>
+        <form action="/Guide_home" method="POST" enctype="multipart/form-data">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required><br>
+
+            <label for="agencyName">Agency Name:</label>
+            <input type="text" id="agencyName" name="agencyName" required><br>
+
+            <label for="contactDetails">Contact Details:</label>
+            <input type="text" id="contactDetails" name="contactDetails" required><br>
+
+            <label for="aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar" required><br>
+
+            <label for="pan">PAN Number:</label>
+            <input type="text" id="pan" name="pan" required><br>
+
+            <label for="gst">GST Number:</label>
+            <input type="text" id="gst" name="gst" required><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*"><br>
+
+            <label>Languages Spoken:</label>
+            <div class="language-label">
+                <input type="checkbox" id="english" name="languages" value="English">
+                <label for="english">English</label>
+            </div>
+            <div class="language-label">
+                <input type="checkbox" id="french" name="languages" value="French">
+                <label for="french">Hindi</label>
+            </div>
+            <div class="language-label">
+                <input type="checkbox" id="spanish" name="languages" value="Spanish">
+                <label for="spanish">Kannada</label>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

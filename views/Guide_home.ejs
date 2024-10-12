@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Guide</title>
+    <style>
+        body {
+            background-image: url("/images/1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 500px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(31, 30, 30, 0.5);
+            -webkit-backdrop-filter: blur(0.5);
+            backdrop-filter: blur(0.5);
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 24px;
+            margin-right: 100px;
+            margin-bottom: 5px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 200px;
+            background: url('/public/images/1.jpg') no-repeat center center;
+            background-size: cover;
+            color: #100f0f;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: black;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: black;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .location-input {
+            margin: 20px 0;
+        }
+
+        .location-input input {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        .location-input button, #useLocation {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Typing Animation for Hero Heading */
+        h1 {
+            font-weight: 850;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        /* Guide List */
+        .guide-list h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #guidesContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .guide-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .guide-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .guide-card h3 {
+            margin: 10px 0;
+        }
+
+        .guide-card button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 350px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .contact {
+            margin-top: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                width: 90%;
+            }
+            body {
+        background-size: cover; /* Ensures the image still covers the background */
+        background-position: center; /* Keeps the image centered */
+    }
+}
+
+            header .logo {
+                font-size: 20px;
+            }
+
+            header nav ul li {
+                margin-right: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .guide-card {
+                width: 180px;
+            }
+
+            .guide-list h2 {
+                font-size: 24px;
+            }
+        
+
+        @media (max-width: 768px) {
+            header nav ul {
+                text-align: center;
+            }
+            body {
+        background-size: contain; /* Changes to 'contain' so the image fits within the screen */
+        background-position: top center; /* Adjusts positioning to keep focus on the top part of the image */
+        background-attachment: scroll; /* Removes fixed background for smoother scrolling on mobile */
+    }
+}
+
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .location-input input,
+            .location-input button,
+            #useLocation {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .guide-card {
+                width: 150px;
+            }
+
+            .guide-list h2 {
+                font-size: 20px;
+            }
+        
+
+        @media (max-width: 480px) {
+            header .logo {
+                font-size: 18px;
+            }
+            body {
+        background-size: contain; /* Contain the image fully within the viewable area */
+        background-position: center; /* Keeps the image centered on very small screens */
+        background-attachment: scroll; /* For better scrolling experience on mobile */
+    }
+}
+
+            header nav ul li {
+                margin: 5px 0;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+            
+
+            .hero h1 {
+                color: black;
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 12px;
+            }
+
+            .location-input input,
+            .location-input button,
+            #useLocation {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            .guide-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .guide-list h2 {
+                font-size: 18px;
+            }
+        
+
+        /* Base button styles */
+        /* Base button styles */
+.button {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Hover effect */
+.button:hover {
+    color: transparent; /* Hide the original text */
+    background-color: transparent;
+    border: 2px solid #ff6600;
+    box-shadow: 0px 4px 15px rgba(255, 102, 0, 0.4);
+}
+
+/* Text change using the ::after pseudo-element */
+.button::after {
+    content: 'Let\'s Go!'; /* New text to appear on hover */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #f6f5f4; /* Color for new text */
+    font-weight: bold;
+}
+
+/* Hover state for ::after */
+.button:hover::after {
+    opacity: 1;
+}
+
+/* Expanding outline animation */
+.button::before {
+    content: ''; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ff6600;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Hello!</h1>
+            <p>Welcome to your guide journey!</p>
+            <h2 style="font-size: 40px;">Start your journey as a guide and earn money!</h2>
+            <br />
+            <form action="/Guide_register" method="get">
+                <button type="submit" class="button">Get Started</button>
+                <a href="/Guide_prof" class="profiles">your profiles</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

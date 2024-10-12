@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Profiles</title>
+    <style>
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .profile {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin: 10px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+        }
+        .profile img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .profile h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .profile p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guide Profiles</h1>
+    <div class="profile-container">
+        <% guides.forEach(function(guide) { %>
+            <div class="profile">
+                <img src="<%= guide.profileImage %>" alt="<%= guide.name %>">
+                <h2><%= guide.name %></h2>
+                <p><strong>Location:</strong> <%= guide.location %></p>
+                <p><strong>Experience:</strong> <%= guide.experience %> years</p>
+                <p><strong>Bio:</strong> <%= guide.bio %></p>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>

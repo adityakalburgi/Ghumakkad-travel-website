@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/images/9.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.85;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1.page-title {
+            font-size: 36px;
+            color: #f5f5f5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-right: 20px;
+            
+        }
+
+        .profile-container {
+            background-color: #fff;
+            margin: 20px;
+            height: 500px;
+            width: 250px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-container:hover{
+            transform: scale(1.1);
+            backdrop-filter: blur(10px);
+            filter:brightness(1.1);
+            transition: 0.4s;
+        }
+
+        .profile-container img {
+            border-radius: 45%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .profile-container h1 {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
+        .profile-container p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .profile-container .rating {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #f39c12;
+        }
+
+        .profile-container .stars {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .stars span {
+            font-size: 20px;
+            color: #f39c12;
+        }
+
+        .profile-container .expense {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #27ae60;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+        }
+
+        .profile-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .profile-container button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Available Guides in bengaluru</h1>
+    <div class="profile-container">
+        <img src="/images/Screenshot 2024-09-10 134912.png" alt="Profile Picture">
+        <h1>Hema Shetty</h1>
+
+        <div class="contact-info">
+            <div><strong>Phone:</strong> 0000000000</div>
+            <div><strong>Email:</strong> hemashetty@example.com</div>
+            <div><strong>Experience:</strong> 3yrs</div>
+            <div><strong>Languages:</strong> Kannada, Hindi</div>
+        </div>
+
+        <div class="rating">
+            <strong>Rating:</strong> 
+            <div class="stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span> (4/5)
+            </div>
+        </div>
+
+        <div class="expense">
+            <strong>Avg. Expense:</strong> ₹2000.00
+        </div>
+    </div>
+    <div class="profile-container">
+        <img src="/images/Prakash.jpeg" alt="Profile Picture">
+        <h1>Prakash Reddy</h1>
+
+        <div class="contact-info">
+            <div><strong>Phone:</strong> 87563 5621</div>
+            <div><strong>Email:</strong> prakashreddy@example.com</div>
+            <div><strong>Experience:</strong> 2yrs</div>
+            <div><strong>Languages:</strong> Kannada, English</div>
+        </div>
+
+        <div class="rating">
+            <strong>Rating:</strong> 
+            <div class="stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span> (3/5)
+            </div>
+        </div>
+
+        <div class="expense">
+            <strong>Avg. Expense:</strong> ₹1000.00
+        </div>
+    </div>
+
+</body>
+</html>
